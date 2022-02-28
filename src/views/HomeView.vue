@@ -20,13 +20,7 @@
         <td>{{ data.scenary }}</td>
         <td>{{ data.place }}</td>
         <td>
-          {{
-            new Date(data.show_date).toLocaleString(navLanguage(), {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })
-          }}
+          {{ dateInLocalLalguage(data.show_date) }}
         </td>
         <td></td>
       </tr>
@@ -46,6 +40,14 @@ export default {
 
   methods: {
     navLanguage: () => navigator.language,
+
+    dateInLocalLalguage: (date) => {
+      return new Date(date).toLocaleString(navigator.language, {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      });
+    },
   },
 
   created() {
