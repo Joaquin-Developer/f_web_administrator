@@ -1,5 +1,7 @@
 <template>
-  <p>create</p>
+  <div class="title">
+    <h2>Create</h2>
+  </div>
 </template>
 
 

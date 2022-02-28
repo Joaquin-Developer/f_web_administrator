@@ -19,21 +19,23 @@
           style="--bs-scroll-height: 100px"
         >
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Listar</a>
+            <router-link :to="'/'">
+              <a class="nav-link active" aria-current="page" href="#">Listar</a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
-              >Actualizar</a
-            >
+            <router-link :to="'/update'">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Actualizar</a
+              >
+            </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Añadir</a>
+            <router-link :to="'/create'">
+              <a class="nav-link active" aria-current="page" href="#">Añadir</a>
+            </router-link>
           </li>
         </ul>
-        <!-- <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
       </div>
     </div>
   </nav>
@@ -43,6 +45,5 @@
 <script>
 export default {
   name: "NavbarComponent",
-  //   props: {},
 };
 </script>
