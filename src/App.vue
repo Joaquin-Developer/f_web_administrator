@@ -16,7 +16,6 @@ export default {
   },
 
   props: {
-    // add @ts-ignore if using TypeScript
     ...RouterLink.props,
     inactiveClass: String,
   },
